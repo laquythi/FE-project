@@ -11,20 +11,20 @@ https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/MultipleSorting/Ang
 +tao project tren github,push code len do - done
 +Data grid : 
  1 data binding - done
- 2 Paging and Scrolling - done (bo qua doan Scrolling,khi nao can doc sau)
+ 2 Paging and Scrolling - done (bo qua doan Scrolling)
  3 Sorting & Filtering , Sorting theo cac field du lieu,co the disable field nao do(ko cho phep user sort 
-field do) , Filtering , Filtering API (doan nay khoai qua bo qua , neu mai kia can phai lam,cu doc ky lai,copy paste roi chinh sua lai) - done
+field do) , Filtering , Filtering API - done
 -trong Data Layer : co DataSource va Store
 +DataSource : sort,filter,group,select.. and tuong tac voi List Widgets (trong DataSource chua dung Store)
 +Store : load,insert,remove,update,totalCount.. and tuong tac voi Edit Form
-4 Columns : doan nay khi nao can se doc sau
+4 Columns :
 
 -trong DevExtreme co cac khai niem Data Grid,DataSource,Store
 -trong link a Dat gui,co phan Resource,page 1 project se hien thi danh sach cac API trong Resource , 
 page 2 se hien thi chi tiet noi dung tung API
 
 1640 da doc docs trong ngay xong
--gio tao project Angular - done
+-tao project Angular - done
 -install DevExtreme - done 
 +add link devExtreme on style tag in angular.json - done
 +in src -> index.html,add dx-viewport class to the <body> tag - done
