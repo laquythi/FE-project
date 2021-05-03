@@ -1,0 +1,40 @@
+link docs trong ngay
+https://js.devexpress.com/Documentation/Guide/Angular_Components/Getting_Started/Add_DevExtreme_to_an_Angular_CLI_Application/
+https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/MultipleSorting/Angular/Light/Compact/
+
+-0950 : 
++tu gio den trua doc tai lieu ve json a Dat gui - done
++doc tai lieu ve cach tao project Angular - done
++trong Angular,cau hinh DevExtreme - done
++Data Binding trong Data Grid - done
++Angular HttpClient
++tao project tren github,push code len do - done
++Data grid : 
+ 1 data binding - done
+ 2 Paging and Scrolling - done (bo qua doan Scrolling,khi nao can doc sau)
+ 3 Sorting & Filtering , Sorting theo cac field du lieu,co the disable field nao do(ko cho phep user sort 
+field do) , Filtering , Filtering API (doan nay khoai qua bo qua , neu mai kia can phai lam,cu doc ky lai,copy paste roi chinh sua lai) - done
+-trong Data Layer : co DataSource va Store
++DataSource : sort,filter,group,select.. and tuong tac voi List Widgets (trong DataSource chua dung Store)
++Store : load,insert,remove,update,totalCount.. and tuong tac voi Edit Form
+4 Columns : doan nay khi nao can se doc sau
+
+-trong DevExtreme co cac khai niem Data Grid,DataSource,Store
+-trong link a Dat gui,co phan Resource,page 1 project se hien thi danh sach cac API trong Resource , 
+page 2 se hien thi chi tiet noi dung tung API
+
+1640 da doc docs trong ngay xong
+-gio tao project Angular - done
+-install DevExtreme - done 
++add link devExtreme on style tag in angular.json - done
++in src -> index.html,add dx-viewport class to the <body> tag - done
++Register 3rd-Party Dependencies (ko can thiet phai khai bao)
++Globalize Registration - done
++create a typings.d.ts file in the src folder with following code - done
++Import DevExtreme Modules in app.module.ts - done
+Now you can use the DevExtreme UI component in your application,add function in app.component.ts -> call function in app.component.html
+ng serve : lan dau compiler DevExtreme hoi lau
+
+
+-add Routing
+-add component,add content inside component,using Data-grid
