@@ -1,36 +1,35 @@
 
-import { NgModule , Component , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { DxDataGridModule , DxButtonModule } from 'devextreme-angular';
-import {Data , Service} from './app.service';
-import DataSource from 'devextreme/data/data_source';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { Component } from '@angular/core';
+import { HttpClient, HttpParams } from "@angular/common/http";
+import {Data} from '@angular/router';
+
+// import { BrowserModule } from '@angular/platform-browser';
+// import { DxDataGridModule , DxButtonModule } from 'devextreme-angular';
+// import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers : [Service]
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
   title = 'project';
-//  data !: Data[];
-//   constructor(service : Service){
-//     this.data = service.getData();
-//   }
-}
+  constructor(private http:HttpClient){}
+   data !: Data[];
+  // create method getData()
+  getData() : Promise<Data[]>{
+    const params = new HttpParams();
+    return this.http
+      .get('https://jsonplaceholder.typicode.com/posts', {
+        params: params
+      })
+      .toPromise()
+      .then((res) => {
+        this.data = res as Data[];
+       console.log(this.data);
+        return this.data;
+      });
+  }
 
-@NgModule({
-  imports: [
-      BrowserModule,
-      DxDataGridModule,
-      DataSource,
-      DxButtonModule
-  ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
- // declarations: [AppComponent],
-  // bootstrap: [AppComponent]
-})
-export class AppModule{}
-platformBrowserDynamic().bootstrapModule(AppModule);
+}

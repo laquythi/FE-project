@@ -1,9 +1,7 @@
+     --------0305----------
 link docs trong ngay
 https://js.devexpress.com/Documentation/Guide/Angular_Components/Getting_Started/Add_DevExtreme_to_an_Angular_CLI_Application/
 https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/MultipleSorting/Angular/Light/Compact/
-
--0950 : 
-     --------0305----------
 +tu gio den trua doc tai lieu ve json a Dat gui
 +doc tai lieu ve cach tao project Angular
 +trong Angular,cau hinh DevExtreme
