@@ -6,11 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import DataSource from 'devextreme/data/data_source';
+// import DataSource from 'devextreme/data/data_source';
 
 // import DevExtreme Modules
-// import { DxButtonModule } from 'devextreme-angular';
-// import { DxDataGridModule } from 'devextreme-angular';
+import { DxButtonModule } from 'devextreme-angular';
+import { DxDataGridModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import DataSource from 'devextreme/data/data_source';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // DxDataGridModule,
+    DxDataGridModule,
     // DataSource
-    // DxButtonModule
+    DxButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

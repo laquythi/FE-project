@@ -1,2 +1,9 @@
-<p>content inside app component html</p>
-<button (click)="getData()">Click Here</button>
+<!-- <p>content inside app component html</p>
+<button (click)="getData()">Click Here</button> -->
+
+<p class="text-center">content inside app component html</p>
+<dx-data-grid id="gridContainer" dataSource="https://jsonplaceholder.typicode.com/posts"
+    [columns]="['userId', 'id', 'title', 'body']" [showBorders]="true">
+    <dx-button text="OK" (onClick)="okClicked()">
+    </dx-button>
+</dx-data-grid>
