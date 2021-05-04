@@ -3,17 +3,18 @@ https://js.devexpress.com/Documentation/Guide/Angular_Components/Getting_Started
 https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/MultipleSorting/Angular/Light/Compact/
 
 -0950 : 
-+tu gio den trua doc tai lieu ve json a Dat gui - done
-+doc tai lieu ve cach tao project Angular - done
-+trong Angular,cau hinh DevExtreme - done
-+Data Binding trong Data Grid - done
+     --------0305----------
++tu gio den trua doc tai lieu ve json a Dat gui
++doc tai lieu ve cach tao project Angular
++trong Angular,cau hinh DevExtreme
++Data Binding trong Data Grid
 +Angular HttpClient
-+tao project tren github,push code len do - done
++tao project tren github,push code len
 +Data grid : 
- 1 data binding - done
+ 1 data binding
  2 Paging and Scrolling - done (bo qua doan Scrolling)
  3 Sorting & Filtering , Sorting theo cac field du lieu,co the disable field nao do(ko cho phep user sort 
-field do) , Filtering , Filtering API - done
+field do) , Filtering , Filtering API
 -trong Data Layer : co DataSource va Store
 +DataSource : sort,filter,group,select.. and tuong tac voi List Widgets (trong DataSource chua dung Store)
 +Store : load,insert,remove,update,totalCount.. and tuong tac voi Edit Form
@@ -34,7 +35,6 @@ page 2 se hien thi chi tiet noi dung tung API
 +Import DevExtreme Modules in app.module.ts - done
 Now you can use the DevExtreme UI component in your application,add function in app.component.ts -> call function in app.component.html
 ng serve : lan dau compiler DevExtreme hoi lau
-
 
 -add Routing
 -add component,add content inside component,using Data-grid
