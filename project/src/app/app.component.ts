@@ -1,16 +1,17 @@
 
 import { Component } from '@angular/core';
-import { HttpClient, HttpParams } from "@angular/common/http";
-import {Data} from '@angular/router';
-import DataSource from 'devextreme/data/data_source';
-// import DataSource from 'devextreme/data/data_source';
+import ODataStore from "devextreme/data/odata/store";
+import DataSource from "devextreme/data/data_source";
+import 'devextreme/data/odata/store';
+import CustomStore from 'devextreme/data/custom_store';
 
-// import { BrowserModule } from '@angular/platform-browser';
 import { DxDataGridModule } from 'devextreme-angular';
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Data } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 import { DxButtonModule } from 'devextreme-angular';
 // import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import alert from 'devextreme/ui/notify';
+// import { DxChartModule } from 'devextreme-angular';
 
 @Component({
   selector: 'app-root',
@@ -20,15 +21,43 @@ import alert from 'devextreme/ui/notify';
 
 export class AppComponent {
   title = 'project';
-  // dataStore !: any;
-  // data !: DataSource[];
-  // dataStore : DataSource[];
+  store: ODataStore;
+  dataSource: DataSource;
 
-  constructor(private http:HttpClient){
+  abc = [];
+  // constructor(private http:HttpClient){
 
-  } 
+  // }
+
+  constructor(private http : HttpClient) {
+    this.store = new ODataStore({
+     // url: "https://jsonplaceholder.typicode.com/posts",
+     // key: "id",
+    // keyType: "Int32",
+      fieldTypes: {
+        id: "Int32",
+        userId: "String"
+        //title: "String",
+        //body: "String"
+      }
+    });
+    this.dataSource = new DataSource({
+      store: {
+        type: 'odata',
+        url: 'https://jsonplaceholder.typicode.com/posts'
+      },
+      select: [
+        'id',
+        'userId',
+        'title',
+        'body'
+      ]
+    })
+    this.getData();
+  }
+
+  // 0505 1400,1430 comment getData
   data !: Data[];
-  // create method getData()
   getData() : Promise<Data[]>{
     const params = new HttpParams();
     return this.http
@@ -38,16 +67,11 @@ export class AppComponent {
       .toPromise()
       .then((res) => {
         this.data = res as Data[];
-       // console.log(this.data);
+        console.log(this.data);
         return this.data;
       });
   }
-
-  // create method to test click button
-  okClicked(){
-    alert('button clicked');
-  }
-  // dataStore !: Data[];
-  // dataStore = this.getData;
-
+  // pointClickHandler(e: any) {
+  //   console.log('row click event handled');
+  // }
 }

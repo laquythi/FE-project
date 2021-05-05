@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 // import DevExtreme Modules
 import { DxButtonModule } from 'devextreme-angular';
 import { DxDataGridModule } from 'devextreme-angular';
+import { DxChartModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,9 @@ import { DxDataGridModule } from 'devextreme-angular';
     AppRoutingModule,
     HttpClientModule,
     DxDataGridModule,
-    // DataSource
-    DxButtonModule
+    // DataSource,
+    DxButtonModule,
+    DxChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
